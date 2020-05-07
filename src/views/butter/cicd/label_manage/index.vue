@@ -9,7 +9,7 @@
           filterable
           allow-create
           default-first-option
-          placeholder="请选择文章标签">
+          placeholder="选择或直接添加响应标签">
 
           <el-option
             v-for="item in response_label_options"
@@ -27,7 +27,7 @@
           filterable
           allow-create
           default-first-option
-          placeholder="请选择文章标签">
+          placeholder="选择或直接添加禁止修改标签">
           <el-option
             v-for="item in denied_label_options"
             :key="item.value"
@@ -44,7 +44,7 @@
           filterable
           allow-create
           default-first-option
-          placeholder="请选择文章标签">
+          placeholder="选择或直接添加不响应标签">
           <el-option
             v-for="item in not_response_label_options"
             :key="item.value"
@@ -62,7 +62,7 @@
           filterable
           allow-create
           default-first-option
-          placeholder="请选择文章标签">
+          placeholder="选择或直接添加仓库锁">
           <el-option
             v-for="item in label_lock_options"
             :key="item.value"
@@ -79,7 +79,7 @@
           filterable
           allow-create
           default-first-option
-          placeholder="请选择文章标签">
+          placeholder="选择或直接添加pr标签锁">
           <el-option
             v-for="item in pr_label_lock_options"
             :key="item.value"
