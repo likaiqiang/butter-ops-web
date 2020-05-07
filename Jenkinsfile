@@ -23,7 +23,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo deploy'
+                sh 'rm -rf /data/*'
+                sh 'mv /export/server/butter-ops-web/* /data'
+                sh 'cp -r ./dist/* /export/server/butter-ops-web/'
             }
         }
     }
