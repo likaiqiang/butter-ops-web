@@ -23,10 +23,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh '`whoami`'
-                sh 'rm -rf /data/*'
-                sh 'cp -r /export/server/butter-ops-web/* /data && rm -rf /export/server/butter-ops-web/*'
-                sh 'cp -r ./dist/* /export/server/butter-ops-web/'
+                sh 'echo `whoami`'
+                sh 'sudo rm -rf /data/*'
+                sh 'sudo cp -r /export/server/butter-ops-web/* /data && sudo rm -rf /export/server/butter-ops-web/*'
+                sh 'sudo cp -r ./dist/* /export/server/butter-ops-web/'
             }
         }
     }
