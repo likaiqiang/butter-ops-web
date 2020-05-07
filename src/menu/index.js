@@ -1,4 +1,6 @@
 import { uniqueId } from 'lodash'
+import store from '@/store/index'
+import util from '@/libs/util'
 
 /**
  * @description 给菜单数据补充上 path 字段
@@ -14,29 +16,8 @@ function supplementPath (menu) {
     } : {}
   }))
 }
+let menu = util.cookies.get('menu') ? eval(util.cookies.get('menu') ) : []
+console.log(JSON.stringify(menu))
+export const menuHeader = supplementPath(menu)
+export const menuAside = supplementPath(menu)
 
-export const menuHeader = supplementPath([
-  { path: '/index', title: '首页', icon: 'home' },
-  {
-    title: '页面',
-    icon: 'folder-o',
-    children: [
-      { path: '/page1', title: '页面 1' },
-      { path: '/page2', title: '页面 2' },
-      { path: '/page3', title: '页面 3' }
-    ]
-  }
-])
-
-export const menuAside = supplementPath([
-  { path: '/index', title: '首页', icon: 'home' },
-  {
-    title: '页面',
-    icon: 'folder-o',
-    children: [
-      { path: '/page1', title: '页面 1' },
-      { path: '/page2', title: '页面 2' },
-      { path: '/page3', title: '页面 3' }
-    ]
-  }
-])

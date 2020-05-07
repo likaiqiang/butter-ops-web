@@ -1,5 +1,5 @@
 {
-  "name": "d2-admin-start-kit",
+  "name": "butter-ops",
   "version": "1.10.0",
   "scripts": {
     "serve": "vue-cli-service serve --open",
@@ -15,6 +15,9 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "@d2-projects/d2-crud": "^2.1.2",
+    "@d2-projects/vue-table-export": "^1.0.1",
+    "@d2-projects/vue-table-import": "^1.0.0",
     "axios": "^0.19.0",
     "better-scroll": "^1.15.2",
     "core-js": "^3.4.3",

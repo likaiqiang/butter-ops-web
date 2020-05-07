@@ -1,9 +1,9 @@
 import request from '@/plugin/axios'
 
-export function accountLogin (data) {
+export function setLabel (params) {
   return request({
-    url: '/auth/login',
+    url: '/ci/label',
     method: 'post',
-    data
+    data:params
   })
 }
