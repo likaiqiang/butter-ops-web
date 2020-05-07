@@ -124,6 +124,7 @@
 <script>
 import dayjs from 'dayjs'
 import { mapActions } from 'vuex'
+import util from '@/libs/util.js'
 import { get_qr_login_url } from '@api/sys.login.get_qr_login'
 import localeMixin from '@/locales/mixin.js'
 export default {
@@ -213,6 +214,7 @@ export default {
       this.submit()
     },
     get_qr_login_info(){
+      console.log('menu'+util.cookies.get('menu') ? eval(util.cookies.get('menu') ) : [])
       get_qr_login_url()
       .then(res => {
         console.log(JSON.stringify(res))
