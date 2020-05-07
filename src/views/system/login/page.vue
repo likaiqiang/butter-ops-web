@@ -72,7 +72,7 @@
               class="page-login--options"
               flex="main:justify cross:center">
               <span><d2-icon name="question-circle"/> 忘记密码</span>
-<!--              <span>注册用户</span>-->
+              <span v-if="enable_qr"><a class="page-login--options" :href="qr_login_url"><d2-icon name="qrcode"/>&nbsp;扫码登录</a></span>
             </p>
             <!-- quick login -->
 <!--            <el-button class="page-login&#45;&#45;quick" size="default" type="info" @click="dialogVisible = true">-->
@@ -124,6 +124,7 @@
 <script>
 import dayjs from 'dayjs'
 import { mapActions } from 'vuex'
+import { get_qr_login_url } from '@api/sys.login.get_qr_login'
 import localeMixin from '@/locales/mixin.js'
 export default {
   mixins: [
@@ -181,13 +182,16 @@ export default {
             trigger: 'blur'
           }
         ]
-      }
+      },
+      enable_qr:false,
+      qr_login_url:''
     }
   },
   mounted () {
     this.timeInterval = setInterval(() => {
       this.refreshTime()
     }, 1000)
+    this.get_qr_login_info()
   },
   beforeDestroy () {
     clearInterval(this.timeInterval)
@@ -207,6 +211,22 @@ export default {
       this.formLogin.username = user.username
       this.formLogin.password = user.password
       this.submit()
+    },
+    get_qr_login_info(){
+      get_qr_login_url()
+      .then(res => {
+        console.log(JSON.stringify(res))
+        if(res.enable===true){
+          this.enable_qr = true;
+          this.qr_login_url = res.url;
+        }
+
+      })
+      .catch(err => {
+        console.log(JSON.stringify(err))
+        console.log('err', err)
+        return false;
+      })
     },
     /**
      * @description 提交表单
