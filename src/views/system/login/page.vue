@@ -156,8 +156,8 @@ export default {
       // ],
       // 表单
       formLogin: {
-        username: 'liyao',
-        password: 'liyao7339556',
+        username: '',
+        password: '',
         code: 'v9am'
       },
       // 表单校验
