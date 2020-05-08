@@ -2,6 +2,10 @@
   <el-dropdown size="small" class="d2-mr">
     <span class="btn-text">{{info.name ? `你好 ${info.name}` : name}}</span>
     <el-dropdown-menu slot="dropdown">
+      <el-dropdown-item @click.native="editUserProfile">
+        <d2-icon name="power-off" class="d2-mr-5"/>
+        修改资料
+      </el-dropdown-item>
       <el-dropdown-item @click.native="logOff">
         <d2-icon name="power-off" class="d2-mr-5"/>
         注销
@@ -34,6 +38,10 @@ export default {
     ...mapActions('d2admin/account', [
       'logout'
     ]),
+    editUserProfile () {
+      this.$router.push({name:'user_list'})
+    }
+    ,
     /**
      * @description 登出
      */
