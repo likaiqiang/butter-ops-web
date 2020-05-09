@@ -22,6 +22,7 @@
 import { mapState, mapActions } from 'vuex'
 import util from '@/libs/util.js'
 import { getVersion } from '@api/butter.doc.get_version'
+// 测试
 export default {
   data() {
     return {
