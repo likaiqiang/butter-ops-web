@@ -75,7 +75,7 @@ export default {
       ],
       rowHandle: {
         columnHeader: '管理',
-        width: '200',
+        width: '150',
         edit: {
           icon: 'el-icon-edit',
           text: '编辑',
