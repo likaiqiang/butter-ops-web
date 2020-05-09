@@ -1,6 +1,6 @@
 {
   "name": "butter-ops",
-  "version": "1.10.0",
+  "version": "1.10.1-dev",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "start": "npm run serve",
@@ -36,6 +36,7 @@
     "sortablejs": "^1.10.1",
     "ua-parser-js": "^0.7.20",
     "vue": "^2.6.11",
+    "vue-codemirror": "^4.0.6",
     "vue-i18n": "^8.15.1",
     "vue-router": "^3.1.3",
     "vuex": "^3.1.2"
@@ -63,6 +64,7 @@
     "vue-cli-plugin-i18n": "^0.6.0",
     "vue-template-compiler": "^2.6.10",
     "webpack-bundle-analyzer": "^3.6.0",
+    "vue-codemirror": "^4.0.6",
     "webpack-theme-color-replacer": "^1.3.3"
   },
   "config": {
