@@ -4,6 +4,7 @@
 <script>
   import util from '@/libs/util'
   export default {
+    name: 'exception_code',
     data() {
       return {
         url: ''
@@ -13,7 +14,7 @@
       get_label_info() {
         let token = util.cookies.get('token')
         console.log(token)
-        this.url = "/api/v1/doc/code?token="+token
+        this.url = "/api/v1/doc/exception_code?token="+token
       },
     },
     mounted(){

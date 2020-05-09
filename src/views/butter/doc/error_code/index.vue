@@ -4,6 +4,7 @@
 <script>
   import util from '@/libs/util'
   export default {
+    name: 'doc_code',
     data() {
       return {
         url: ''

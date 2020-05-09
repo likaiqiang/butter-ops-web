@@ -44,6 +44,68 @@ const frameIn = [
         },
         component: _import('butter/cicd/label_manage')
       },
+      {
+        path: '/version/list',
+        // 开启页面缓存，name必须和页面export里的名字一致
+        name: 'version_list',
+        meta: {
+          title: '版本列表',
+          auth: true,
+          // 开启页面缓存
+          cache:true
+        },
+        component: _import('butter/version-manage/version-list')
+      },
+            {
+        path: '/doc/code',
+        // 开启页面缓存，name必须和页面export里的名字一致
+        name: 'doc_code',
+        meta: {
+          title: '错误码',
+          auth: true,
+          // 开启页面缓存
+          cache:true
+        },
+        component: _import('butter/doc/error_code')
+      },
+      {
+        path: '/doc/exception_code',
+        // 开启页面缓存，name必须和页面export里的名字一致
+        name: 'exception_code',
+        meta: {
+          title: '异常码',
+          auth: true,
+          // 开启页面缓存
+          cache:true
+        },
+        component: _import('butter/doc/exception_code')
+      },
+      {
+        path: '/doc/document',
+        // 开启页面缓存，name必须和页面export里的名字一致
+        name: 'doc_document',
+        meta: {
+          title: '运维文档',
+          auth: true,
+          // 开启页面缓存
+          cache:true
+        },
+        component: _import('butter/doc/document')
+      },
+
+
+      {
+        path: '/demo/page1',
+        // 开启页面缓存，name必须和页面export里的名字一致
+        name: 'demo1',
+        meta: {
+          title: 'demo1',
+          auth: true,
+          // 开启页面缓存
+          cache:true
+        },
+        component: _import('demo/page1')
+      },
       // 刷新页面 必须保留
       {
         path: 'refresh',
